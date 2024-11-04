@@ -12,8 +12,7 @@
 // Додай мінімальне оформлення галереї флексбоксами через CSS класи.
 
 // На що буде звертати увагу ментор при перевірці:
-
-// Створена й додана в DOM галерея із трьох зображень
+// Створена й додана в DOM галерея із шести зображень
 // Галерея додана у список ul.gallery і являє собою 6 елементів <li>, в які вкладені елементи <img>
 // Для створення елементів <img> використані дані з масиву об’єктів images
 // Усі елементи галереї додані в DOM за одну операцію додавання
@@ -45,3 +44,15 @@ const images = [
     alt: 'Lighthouse Coast Sea',
   },
 ];
+
+const gallery = document.querySelector('.gallery');
+
+const addGallery = images
+  .map(
+    image => `<li> 
+    <img src="${image.url}" alt="${image.alt}" width="360" height="300" />
+  </li>`
+  )
+  .join('');
+
+gallery.insertAdjacentHTML('beforeend', addGallery);
