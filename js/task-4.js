@@ -16,5 +16,29 @@
 // Прослуховується подія submit
 // Під час відправлення форми сторінка не перезавантажується
 // Якщо при сабміті у формі є незаповнені поля, виводиться alert
-// При сабміті в консоль виводиться об’єкт з двома властивостями, де ключі — це ім’я інпутів, а значення — відповідні значення цих інпутів, очищені від пробілів по краях
+// При сабміті в консоль виводиться об’єкт з двома властивостями, де ключі — це ім’я інпутів,
+// а значення — відповідні значення цих інпутів, очищені від пробілів по краях
 // Після сабміту елементи форми очищаються
+
+const registerForm = document.querySelector('.login-form');
+
+registerForm.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  const email = form.elements.email.value.trim();
+  const password = form.elements.password.value.trim();
+
+  if (email === '' || password === '') {
+    return alert('All form fields must be filled in');
+  }
+
+  const obj = {
+    email: email,
+    password: password,
+  };
+  console.log(obj);
+
+  form.reset();
+}
