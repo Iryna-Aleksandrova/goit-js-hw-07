@@ -1,0 +1,68 @@
+.elements {
+  max-width: 534px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24px;
+}
+
+.controls {
+  width: 486px;
+  padding: 32px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 16px;
+  background-color: #f6f6fe;
+}
+
+.input {
+  width: 150px;
+  border: 1px solid #808080;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+.create-btn,
+.destroy-btn {
+  width: 120px;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+.create-btn {
+  background-color: #4e75ff;
+}
+
+.create-btn:hover,
+.create-btn:focus {
+  background-color: #6c8cff;
+}
+.destroy-btn {
+  background-color: #ff4e4e;
+}
+
+.destroy-btn:hover,
+.destroy-btn:focus {
+  background-color: #ff7070;
+}
+
+.boxes {
+  max-width: 486px;
+  padding: 32px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 44px;
+  row-gap: 16px;
+  background-color: #f6f6fe;
+}
