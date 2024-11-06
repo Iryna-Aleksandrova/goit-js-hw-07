@@ -41,10 +41,13 @@ const boxes = document.querySelector('.boxes');
 
 let sizes = 30;
 
-create.addEventListener('click', createMarkup);
+create.addEventListener('click', handlerCreate);
 destroy.addEventListener('click', handlerDestoy);
 
-function createMarkup() {
+function handlerCreate() {
+  boxes.innerHTML = '';
+  sizes = 30;
+
   if (Number(input.value) < 0 || Number(input.value) > 100) {
     return;
   }
