@@ -54,9 +54,8 @@ function createMarkup() {
 
 function createBoxes(amount) {
   boxes.innerHTML = '';
-  sizes = 30;
-
-  const arr = [];
+  let sizes = 30;
+  let fragment = document.createDocumentFragment();
 
   for (let i = 0; i < amount; i++) {
     const myBox = document.createElement('div');
@@ -64,12 +63,11 @@ function createBoxes(amount) {
     myBox.style.height = `${sizes}px`;
     myBox.style.backgroundColor = getRandomHexColor();
 
-    arr.push(myBox);
-
+    fragment.appendChild(myBox);
     sizes += 10;
   }
 
-  boxes.append(...arr);
+  boxes.appendChild(fragment);
 }
 
 function handlerDestoy() {
